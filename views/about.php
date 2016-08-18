@@ -16,8 +16,8 @@
       	    <h1 class="text-center">Demon Eyes</h1>
       	    
       	      <ul class="nav nav-pills">
-  			    <li role="presentation" class="active"><a href="#">首頁</a></li>
-  			    <li role="presentation"><a href="about.php">關於我們</a></li>
+  			    <li role="presentation"><a href="index.php">首頁</a></li>
+  			    <li role="presentation" class="active"><a href="about.php">關於我們</a></li>
   			    <li role="presentation"><a href="register.php">註冊</a></li>
 			  </ul>
 
@@ -38,11 +38,10 @@
       <div class="container">
       	<div class="row">
       	  <p class="text-center">
-      	  	 &copy; <?php echo date("Y");?> Demon Eyes 
+      	  	&copy; <?php echo date("Y");?> Demon Eyes
       	  </p>
       	</div>
       </div>
     </div>
-    <script src="public/js/dist/bundle.js" type="text/javascript" ></script>
   </body>
 </html>
