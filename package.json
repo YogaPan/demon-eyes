@@ -44,6 +44,7 @@
     "test": "npm run lint",
     "dev": "webpack --watch",
     "product": "webpack -p --progress",
+    "crawl": "node app/test.js",
     "lint": "eslint .",
     "precommit": "npm test",
     "prepush": "npm test"
