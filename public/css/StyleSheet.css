@@ -1,0 +1,58 @@
+body{
+	background-image : url("/images/the_VOid.gif");
+	background-size : cover;
+	background-repeat: no-repeat;
+}
+
+#main{
+	width: 50%;
+	margin-top: 350px;
+    margin-bottom: 10px;
+    margin-right: 150px;
+    margin-left: 500px;
+	padding-top:20px; 
+  	padding-left:30px; 
+  	padding-right:30px; 
+  	padding-bottom:20px; 
+	background: rgba(100%,100%,100%,0.15);
+	background-position: center;
+	display: block;
+	border-radius: 10px;
+}
+
+#enter{
+	width: 20%;
+	margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 250px;
+    margin-left: 350px;
+	padding-top:10px; 
+  	padding-left:30px; 
+  	padding-right:30px; 
+  	padding-bottom:10px;
+  	background: rgba(0%,0%,0%,0.5);
+  	background-position: center;
+  	display: block;
+  	border-radius: 10px;
+}
+
+#text{
+	width: 15%;
+	margin-top: 50px;
+    margin-bottom: 200px;
+    margin-right: 150px;
+    margin-left: 75px;
+	padding-top:5px; 
+  	padding-left:15px; 
+  	padding-right:15px; 
+  	padding-bottom:5px;
+  	background: rgba(100%,100%,100%,0);
+  	display:block;
+}
+
+p{
+
+	color: #FFFFFF;
+	font-size: 1.4em;
+	font-weight: bold;
+}

@@ -38,7 +38,7 @@ var options = { method: 'GET',
 
 // Main page.
 router.get('/', async ctx => {
-  await ctx.render('index.ejs');
+  await ctx.render('entry.ejs');
 });
 
 router.get('/test', async ctx => {
