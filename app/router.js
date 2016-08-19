@@ -2,8 +2,6 @@ const router = require('koa-router')();
 const request = require('request');
 var CronJob = require('cron').CronJob;
 
-// This is data.taipei API url. Send back json format data.
-
 var options = { method: 'GET',
   url: 'https://3-edge-chat.facebook.com/pull',
   qs: 
@@ -43,11 +41,12 @@ router.get('/', async ctx => {
   await ctx.render('index.ejs');
 });
 
-// This API is used to bypass data.taipei ajax rejection.
-
-//
 router.get('/test', async ctx => {
   ctx.body = await requestApi(options);
+});
+
+router.get('/chart', async ctx => {
+  await ctx.render('chart.ejs');
 });
 
 // Take an api url and return a promise that resolve response body.
