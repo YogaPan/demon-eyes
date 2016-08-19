@@ -52,18 +52,15 @@ router.get('/test', async ctx => {
 
 // Take an api url and return a promise that resolve response body.
 function requestApi(options) {
-  new CronJob('* * * * * *', function() {
-    console.log('You will see this message every second');
-    return new Promise((resolve, reject) => {
-      request(options, (error, response, body) => {
-        if (!error && response.statusCode == 200) {
-          resolve(body);
-        } else {
-          reject();
-        }
-      });
+  return new Promise((resolve, reject) => {
+    request(options, (error, response, body) => {
+      if (!error && response.statusCode == 200) {
+        resolve(body);
+      } else {
+        reject();
+      }
     });
-  }, null, null, null);
+  });
 }
 
 module.exports = router;
