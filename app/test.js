@@ -3,39 +3,39 @@ var request = require('request');
 var options = { method: 'GET',
   url: 'https://3-edge-chat.facebook.com/pull',
   qs: 
-   { channel: 'p_100000139310973',
-     seq: '2',
-     partition: '-2',
-     clientid: '2932f926',
-     cb: '42us',
-     idle: '1',
-     qp: 'y',
-     cap: '8',
-     tur: '1324',
-     qpmade: '1471588132339',
-     pws: 'fresh',
-     isq: '296197',
-     msgs_recv: '2',
-     uid: '100000139310973',
-     viewer_uid: '100000139310973',
-     sticky_token: '180',
-     sticky_pool: 'ash2c06_chat-proxy',
-     state: 'active' },
+   { 'cap': '8',
+'cb': '2qfi',
+'channel': 'p_100000139310973',
+'clientid': '7490eec7',
+'format': 'json',
+'idle': '0',
+'isq': '173180',
+'msgs_recv': '0',
+'partition': '-2',
+'qp': 'y',
+'seq': '0',
+'state': 'active',
+'sticky_pool': 'atn2c06_chat-proxy',
+'sticky_token': '0',
+'uid': '100000139310973',
+'viewer_uid': '100000139310973',
+'wtc': '171%2C170%2C0.000%2C171%2C171' },
+
   headers: 
-   { 'postman-token': '7e12e2c9-dc09-f364-14af-ee2b3b8f769d',
-     'cache-control': 'no-cache',
-     cookie: 'locale=zh_TW; datr=SdgyVwl0sj_h5w-B3hGq-O8V; pl=n; lu=ghtIC-rrQfyxV27U5-lU6E0w; sb=eG53V26t-WDYYedGHsADh7Ef; act=1471585564503%2F33; c_user=100000139310973; xs=103%3ACDtnSOED15v8kQ%3A2%3A1471191726%3A17350; fr=0RxIR50qplC7X8Svp.AWUYoxqBE7MZEfaGzmpzEmkVLDw.BXd252.KE.AAA.1.0.BXtqUq.AWUafYnW; csm=2; s=Aa7T0e9qTqx7QdhF.BXsJqu; p=-2; presence=EDvF3EtimeF1471588091EuserFA21B00139310973A2EstateFDutF1471588091842Et2F_5bDiFA2thread_3a133765889293B6A2EsiFA2133765889293B6A2ErF1CAcDiFA2user_3a1B04034078072A2ErF1C_5dElm2FA2user_3a1B04034078072A2Euct2F1471585299798EtrFA2loadA2EtwF1831004640EatF1471588090587CEchFDp_5f1B00139310973F1CC',
-     'accept-language': 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4',
-     'accept-encoding': 'gzip, deflate, sdch, br',
-     referer: 'https://www.facebook.com/',
-     accept: '*/*',
-     'user-agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
-     'x-devtools-emulate-network-conditions-client-id': '209ac9fa-3832-401c-ab81-3515989486b5',
-     origin: 'https://www.facebook.com' } };
+   { 'accept': '*/*',
+'accept-encoding': 'gzip, deflate, sdch, br',
+'accept-language': 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+'cookie': 'locale=zh_TW; datr=SdgyVwl0sj_h5w-B3hGq-O8V; pl=n; lu=ghtIC-rrQfyxV27U5-lU6E0w; sb=eG53V26t-WDYYedGHsADh7Ef; c_user=100000139310973; xs=103%3ACDtnSOED15v8kQ%3A2%3A1471191726%3A17350; csm=2; s=Aa7T0e9qTqx7QdhF.BXsJqu; fr=0RxIR50qplC7X8Svp.AWXoRqPPFy4A-uCeC4-6OIshdlw.BXd252.KE.AAA.1.0.BXttoj.AWXXzZoG; p=-2; act=1471601898990%2F8; presence=EDvF3EtimeF1471601917EuserFA21B00139310973A2EstateFDt2F_5b_5dElm2FnullEuct2F1471601924716EtrFA2close_5fclickA2EtwF2051380155EatF1471601912830G471601917991CEchFDp_5f1B00139310973F9CC',
+'dnt': '1',
+'origin': 'https://www.facebook.com',
+'referer': 'https://www.facebook.com/',
+'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36' },
+gzip: true,
+};
 
 
 new CronJob('* * * * * *', function() {
-  console.log('You will see this message every second');
+  // console.log('You will see this message every second');
   function callback(error, response, body) {
     if (!error && response.statusCode == 200) {
       // var info = JSON.parse(body);
@@ -44,3 +44,4 @@ new CronJob('* * * * * *', function() {
   }
   request(options, callback);
 }, null, true, null);
+
