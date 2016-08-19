@@ -29,9 +29,8 @@ var options = { method: 'GET',
 'dnt': '1',
 'origin': 'https://www.facebook.com',
 'referer': 'https://www.facebook.com/',
-'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36' }, 
-
-  gzip:true
+'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36' },
+gzip: true,
 };
 
 
