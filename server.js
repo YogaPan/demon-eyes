@@ -97,7 +97,13 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-const port = 8080;
+let port;
+
+if (process.env.NODE_ENV === 'production') {
+  port = 80;
+} else {
+  port = 8080;
+}
 
 app.listen(port, () => {
   console.log(`Server start listening on port ${port}`);
