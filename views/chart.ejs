@@ -8,9 +8,21 @@
         height: 400px;
       }
     </style>
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
   </head>
 
   <body>
+    <div class="nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/app">App</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+    <div class="info">
+      <h1>Your Friend Activity</h1>
+    </div>
     <div id="chart">
       <svg></svg>
     </div>
@@ -27,6 +39,8 @@
         cos.push({ x: i, y: 0.5 * Math.cos(i / 10) })
       }
 
+      // This is fake data.
+      // Real data need husky implement backend api.
       const data = [
         {
           values: sin,
