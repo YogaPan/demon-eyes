@@ -92,78 +92,78 @@ class Fetcher {
         }
 
 // console.log(jsonObj);
-      if (jsonObj.hasOwnProperty('ms')) {
-        // check 
-        // var arrObj = [jsonObj.ms];
-        // console.log(jsonObj);
-        // console.log('------');
-        // console.log('------');
-        // console.log(jsonObj.ms);
-        // console.log(jsonObj.ms.length);
-        for (var i = 0; i < jsonObj.ms.length; i++){
-          var obj = jsonObj.ms[i];
-          for (var key in obj){
-            var value = obj[key];
-          // console.log(obj.overlay);
-          for (var uid in obj.overlay){
-            console.log(uid); // fb_uid
-            // console.log(obj.overlay[uid]);
-            console.log(obj.overlay[uid].la); // lastactivetime
-
-            if(uid > 0)
-            {
-              fs.writeFile(uid + '.txt', obj.overlay[uid].la, function(err) {
-                if(err) {
-                  return console.log(err);
-                }
-                console.log('The file was saved!');
-              });
-
-            }
-
-
-          }
-          
-          // console.log(key);
-          // console.log(value);
+        if (jsonObj.hasOwnProperty('ms')) {
+          // check 
+          // var arrObj = [jsonObj.ms];
+          // console.log(jsonObj);
           // console.log('------');
-          // console.log(ojb);
-            if(key == 'type' && value == 'buddylist_overlay'){
-              // for()
-
-
-              console.log('yesss~~~');
+          // console.log('------');
+          // console.log(jsonObj.ms);
+          // console.log(jsonObj.ms.length);
+          for (var i = 0; i < jsonObj.ms.length; i++){
+            var obj = jsonObj.ms[i];
+            for (var key in obj){
+              var value = obj[key];
+            // console.log(obj.overlay);
+              for (var uid in obj.overlay){
+                console.log(uid); // fb_uid
+                // console.log(obj.overlay[uid]);
+                console.log(obj.overlay[uid].la); // lastactivetime
+    
+                if(uid > 0)
+                {
+                  fs.writeFile(uid + '.txt', obj.overlay[uid].la, function(err) {
+                    if(err) {
+                      return console.log(err);
+                    }
+                    console.log('The file was saved!');
+                  });
+    
+                }
+    
+    
+              }
+            
+            // console.log(key);
+            // console.log(value);
+            // console.log('------');
+            // console.log(ojb);
+              if(key == 'type' && value == 'buddylist_overlay'){
+                // for()
+  
+  
+                console.log('yesss~~~');
+              }
             }
           }
+          /* if (jsonObj.ms.type == 'buddylist_overlay'){
+            console.log('yes');
+          } */
+          
+/*  
+          // 寫入檔案
+          // count++;
+          fs.writeFile(count + '.txt', cutresp, function(err) {
+            if(err) {
+              return console.log(err);
+            }
+            // console.log("The file was saved!");
+          });*/
         }
-        /* if (jsonObj.ms.type == 'buddylist_overlay'){
-          console.log('yes');
-        } */
-        
-/*
-        // 寫入檔案
-        // count++;
-        fs.writeFile(count + '.txt', cutresp, function(err) {
-          if(err) {
-            return console.log(err);
-          }
-          // console.log("The file was saved!");
-        });*/
-      }
 
-      if (jsonObj.hasOwnProperty('seq')) {
-        // Your Code here
-        this.options.qs.seq = JSON.parse(cutresp.seq, function(k, v) {
-          return v;
-        });
-      }
+        if (jsonObj.hasOwnProperty('seq')) {
+          // Your Code here
+          this.options.qs.seq = JSON.parse(cutresp.seq, function(k, v) {
+            return v;
+          });
+        }
 
-    });
+      });
   }
 }
-  let fetcher = new Fetcher()
+let fetcher = new Fetcher();
 
 // Cron 包起來
 new CronJob('* * * * * *', function() {
-  fetcher.startRequest()
+  fetcher.startRequest();
 }, null, true, null);
