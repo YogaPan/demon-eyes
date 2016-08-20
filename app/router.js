@@ -10,4 +10,8 @@ router.get('/chart', async ctx => {
   await ctx.render('chart.ejs');
 });
 
+router.get('/app', async ctx => {
+  await ctx.render('app.ejs');
+});
+
 module.exports = router;
