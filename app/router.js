@@ -6,10 +6,6 @@ router.get('/', async ctx => {
   await ctx.render('entry.ejs');
 });
 
-router.get('/test', async ctx => {
-  ctx.body = await requestApi(options);
-});
-
 router.get('/chart', async ctx => {
   await ctx.render('chart.ejs');
 });
