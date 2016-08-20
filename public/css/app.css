@@ -90,6 +90,7 @@ button:hover {
 }
 
 .big-eye {
+  clear: both;
   height: 400px;
   width: 100%;
   background-color: #111;
