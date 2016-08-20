@@ -41,6 +41,14 @@ router.get('/', async ctx => {
   await ctx.render('entry.ejs');
 });
 
+router.get('/home', async ctx => {
+  await ctx.render('home.ejs');
+});
+
+router.get('/about', async ctx => {
+  await ctx.render('about.ejs');
+});
+
 router.get('/test', async ctx => {
   ctx.body = await requestApi(options);
 });
