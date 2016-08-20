@@ -40,9 +40,10 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
-    "start": "nodemon . --ignore public/ --ignore webpack.config.js",
+    "start": "sudo node index.js",
     "test": "npm run lint",
-    "dev": "webpack --watch",
+    "dev": "nodemon . --ignore public/ --ignore webpack.config.js",
+    "watch": "webpack --watch",
     "product": "webpack -p --progress",
     "crawl": "node app/test.js",
     "lint": "eslint .",
