@@ -97,7 +97,7 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
   console.log(`Server start listening on port ${port}`);
